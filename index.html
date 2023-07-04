@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+  <title>Washing Machine Project</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -17,7 +17,65 @@
 </head>
 
 <body>
- 
+  <h1 class="visuallyhidden">Washing machine interface</h1>
+  <main class="main-content">
+    <div class="container">
+<!-- Washing mode list -->
+      <ul class="washing-mode-list">
+        <li class="washing-mode-item washing-mode-item-active">
+          <a class="washing-mode-item-link" href="#">Synthetic</a>
+        </li>
+        <li class="washing-mode-item">
+          <a class="washing-mode-item-link" href="#">Wool</a>
+        </li>
+        <li class="washing-mode-item">
+          <a class="washing-mode-item-link" href="#">Denim</a>
+        </li>
+        <li class="washing-mode-item">
+          <a class="washing-mode-item-link" href="#">Silk</a>
+        </li>
+        <li class="washing-mode-item">
+          <a class="washing-mode-item-link" href="#">Linen</a>
+        </li>
+      </ul>
+      <p class="washing-mode-notice">Loads should be under 8 pounds. It is recommended using neutral detergent to prevent <br> damage to the cloth and to improve the washing results.</p>
+
+      <!-- Washing mode info -->
+
+      <div class="washing-mode-info">
+
+        <button type="button" class="washing-mode-controller washing-mode-controller-prev">
+          <img class="washing-mode-controller-img" src="img/icon-arrow-left.svg" alt="Previous">
+        </button>
+
+        <button type="button" class="washing-mode-controller washing-mode-controller-next">
+          <img class="washing-mode-controller-img" src="img/icon-arrow-right.svg" alt="Next">
+        </button>
+
+        <button class="start-button" type="button">Start</button>
+
+        <dl class="washing-mode-status">
+          
+          <div class="washing-mode-status-item washing-mode-status-item-timer">
+            <dt class="washing-mode-status-heading">Timer</dt>
+            <dd class="washing-mode-status-value">45 min</dd>
+          </div>
+
+          <div class="washing-mode-status-item washing-mode-status-item-temperature">
+            <dt class="washing-mode-status-heading">Temperature</dt>
+            <dd class="washing-mode-status-value">Cold</dd>
+          </div>
+
+          <div class="washing-mode-status-item washing-mode-status-item-load">
+            <dt class="washing-mode-status-heading">Load</dt>
+            <dd class="washing-mode-status-value">Medium</dd>
+          </div>
+
+        </dl>
+      </div>
+
+    </div>
+  </main>
 
   <script src="js/main.js"></script>
 </body>

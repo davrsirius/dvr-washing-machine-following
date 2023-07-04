@@ -11,7 +11,15 @@ html {
 }
 
 :root {
-  --body-font: 'Roboto', sans-serif
+  --body-font: 'Roboto', sans-serif;
+  --body-color: #DE8A89;
+  --font-color: #FFEFF0;
+  --pale-font: #EAB8B6;
+  --slider-color: #EBB9B7;
+  --timer-bg: #3E3C3D;
+  --temperature-bg: #353333;
+  --load-bg: #201E1E;
+  --button-bg: #131313;
 }
 
 body {
@@ -23,8 +31,8 @@ body {
   font-family: var(--body-font);
   font-size: 16px;
   line-height: 1.5;
-  background-color: #fff;
-  color: #222;
+  background-color: var(--body-color);
+  color: var(--font-color);
 }
 
 img {
@@ -32,14 +40,25 @@ img {
   height: auto;
 }
 
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 
 /* CONTAINER */
 
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 880px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -48,16 +67,184 @@ img {
 /* MAIN CONTENT */
 .main-content {
   flex-grow: 1;
+  padding-top: 150px;
 }
+
+
+.washing-mode-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+/* .washing-mode-item + .washing-mode-item {
+  margin-left: 50px;
+} */
+.washing-mode-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.washing-mode-item {
+
+}
+
+.washing-mode-item-active .washing-mode-item-link {
+  opacity: 1;
+}
+
+.washing-mode-item-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--font-color);
+  opacity: 0.6;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.washing-mode-item-link:hover {
+  opacity: 1;
+}
+
+
+
+.washing-mode-notice {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+/* WASHING MODE INFO */
+
+/* Washing mode buttons */
+
+.washing-mode-controller {
+  width: 100px;
+  height: 100px;
+  border: 0;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+}
+
+.washing-mode-controller:hover {
+  opacity: 1;
+}
+.washing-mode-controller-img {
+  width: 48px;
+  height: 48px;
+}
+.washing-mode-controller-prev{
+  left: 0;
+  transform: translateX(-100%);
+}
+.washing-mode-controller-next{
+  right: 0;
+  transform: translateX(100%);
+}
+
+
+.start-button {
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  color: var(--font-color);
+  width: 240px;
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  transform: translateY(50%);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.start-button:hover {
+  transform: translateY(40%);
+}
+
+
+.washing-mode-info {
+  position: relative;
+  
+}
+.washing-mode-status {
+  display: flex;
+  margin: 0;
+}
+.washing-mode-status-item {
+  width: 280px;
+  height: 280px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.washing-mode-status-heading {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--body-color);
+}
+.washing-mode-status-value {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+
+.washing-mode-status-item-timer {
+  background-color: var(--timer-bg);
+}
+.washing-mode-status-item-temperature{
+  background-color: var(--temperature-bg);
+}
+
+.washing-mode-status-item-load {
+  background-color: var(--load-bg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* RETINA BACKGROUNDS */
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {}
